@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import './App.css';
 
-class App extends Component {
+class Timeline extends Component {
   render() {
     return (
-      <div className="wrapper">
+      <div className="timeline">
         <h1>André Dias dos Santos</h1>
       </div>
     );
