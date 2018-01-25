@@ -1,0 +1,48 @@
+.player {
+  width: 32px;
+  height: 32px;
+  overflow: hidden;
+  background-repeat: no-repeat;
+  background-position: left top;
+  animation: player-animation-right 1s steps(3) infinite;
+}
+
+@keyframes player-animation-up {
+  0% {
+    background-position: 0px -64px;
+  }
+
+  100% {
+    background-position: -96px -64px;
+  }
+}
+
+@keyframes player-animation-down {
+  0% {
+    background-position: 0px 0;
+  }
+
+  100% {
+    background-position: -96px 0;
+  }
+}
+
+@keyframes player-animation-left {
+  0% {
+    background-position: 0px -96px;
+  }
+
+  100% {
+    background-position: -96px -96px;
+  }
+}
+
+@keyframes player-animation-right {
+  0% {
+    background-position: 0px -32px;
+  }
+
+  100% {
+    background-position: -96px -32px;
+  }
+}

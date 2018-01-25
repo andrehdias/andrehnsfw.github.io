@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-
-import { Application, Spritesheet } from 'pixi.js';
+import PlayerImage from '../assets/mage_walk.png';
+import '../css/player.css';
 
 class Player extends Component {
   constructor() {
@@ -11,17 +11,13 @@ class Player extends Component {
     };
   }
 
-  componentDidMount() {
-    const app = new Application(window.innerWidth, window.innerHeight, '#stage');
-
-    this.setState({
-      stage: app.stage
-    });
-  }
-
   render() {
+    const style = {
+      backgroundImage: `url(${PlayerImage}`
+    };
+
     return (
-        <canvas id="stage"></canvas>
+      <div className="player" style={style}></div>
     );
   }
 }
