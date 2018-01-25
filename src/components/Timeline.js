@@ -1,14 +1,15 @@
 import React, { Component } from 'react';
-import './App.css';
+
+import Player from './Player';
 
 class Timeline extends Component {
   render() {
     return (
       <div className="timeline">
-        <h1>André Dias dos Santos</h1>
+        <Player />
       </div>
     );
   }
 }
 
-export default App;
+export default Timeline;

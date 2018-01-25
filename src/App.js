@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
 import './App.css';
 
+import Timeline from './components/Timeline';
+
 class App extends Component {
   render() {
     return (
       <div className="wrapper">
-        <h1>André Dias dos Santos</h1>
+        <Timeline />
       </div>
     );
   }
