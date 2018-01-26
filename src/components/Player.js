@@ -3,12 +3,10 @@ import PlayerImage from '../assets/mage_walk.png';
 import '../css/player.css';
 
 class Player extends Component {
-  constructor() {
+  constructor(props) {
     super();
 
-    this.state = {
-      stage: null
-    };
+    this.props = props;
   }
 
   render() {
@@ -17,7 +15,7 @@ class Player extends Component {
     };
 
     return (
-      <div className="player" style={style}></div>
+      <div className={["player", `player--${this.props.direction}`].join(' ')} style={style}></div>
     );
   }
 }

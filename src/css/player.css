@@ -4,7 +4,22 @@
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: left top;
-  animation: player-animation-right 1s steps(3) infinite;
+}
+
+.player--up {
+  animation: player-animation-up .6s steps(3) infinite;
+}
+
+.player--down {
+  animation: player-animation-down .6s steps(3) infinite;
+}
+
+.player--left {
+  animation: player-animation-left .6s steps(3) infinite;
+}
+
+.player--right {
+  animation: player-animation-right .6s steps(3) infinite;
 }
 
 @keyframes player-animation-up {
