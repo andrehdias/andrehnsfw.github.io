@@ -2,22 +2,14 @@ import React, { Component } from 'react';
 import PlayerImage from '../assets/mage_walk.png';
 import '../css/player.css';
 
-class Player extends Component {
-  constructor(props) {
-    super();
+const Player = ({direction}) => {
+  const style = {
+    backgroundImage: `url(${PlayerImage}`
+  };
 
-    this.props = props;
-  }
-
-  render() {
-    const style = {
-      backgroundImage: `url(${PlayerImage}`
-    };
-
-    return (
-      <div className={["player", `player--${this.props.direction}`].join(' ')} style={style}></div>
-    );
-  }
-}
+  return (
+    <div className={["player", `player--${direction}`].join(' ')} style={style}></div>
+  );
+};
 
 export default Player;

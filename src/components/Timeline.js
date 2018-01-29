@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import Player from './Player';
-import FontAwesome from 'react-fontawesome';
+import Event from './Event';
+import Arrow from './Arrow';
 
 import '../css/timeline.css';
-import 'font-awesome/css/font-awesome.css';
 
 class Timeline extends Component {
   constructor() {
@@ -19,9 +19,18 @@ class Timeline extends Component {
   render() {
     return (
       <div className="timeline">
-        <Arrow direction="left" event={() => this.handleArrows("left")} />
-        <Player direction={this.state.direction} />
-        <Arrow direction="right" event={() => this.handleArrows("right")} />
+        <div className="timeline-events">
+          <Event title="Born" year="1995" description="I was born!" position={{x: 100, y: 80}} />
+        </div>
+
+        <div className="timeline-player">
+          <Player direction={this.state.direction} />
+        </div>
+
+        <div className="timeline-controls">
+          <Arrow direction="left" event={() => this.handleArrows("left")} />
+          <Arrow direction="right" event={() => this.handleArrows("right")} />
+        </div>
       </div>
     );
   }
@@ -30,33 +39,23 @@ class Timeline extends Component {
 
   handleEvents() {
     window.addEventListener('keydown', ev => {
-      switch(ev.keyCode) {
-        case 38:
-          this.setState({ direction: 'up' });
-          break;
-        case 40:
-          this.setState({ direction: 'down' });
-          break;
+      switch (ev.keyCode) {
         case 37:
           this.setState({ direction: 'left' });
           break;
         case 39:
           this.setState({ direction: 'right' });
           break;
+        default:
+          this.setState({ direction: 'stop' });
       }
     });
+
+    window.addEventListener('keyup', ev => {
+      if ([37, 39].indexOf(ev.keyCode) >= 0)
+        this.setState({ direction: 'stop' });
+    });
   }
- }
-
-const Arrow = props => {
-  const classes = `arrow arrow-${props.direction}`;
-  const icon = (props.direction === 'left') ? 'long-arrow-left' : 'long-arrow-right';
-
-  return (
-    <span className={classes} onClick={props.event}>
-      <FontAwesome name={icon} size="lg" />
-    </span>
-  );
-};
+}
 
 export default Timeline;
