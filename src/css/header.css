@@ -1,0 +1,21 @@
+header {
+  width: 100%;
+  position: absolute;
+  padding: 15px;
+  display: flex;
+}
+
+.title {
+  font-size: 20px;
+  margin-top: 5px;
+}
+
+.links {
+  margin-left: auto;
+}
+
+.links a {
+  color: #fff;
+  text-decoration: none;
+  margin-left: 12px;
+}

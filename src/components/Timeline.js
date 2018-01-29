@@ -20,7 +20,7 @@ class Timeline extends Component {
     return (
       <div className="timeline">
         <div className="timeline-events">
-          <Event title="Born" year="1995" description="I was born!" position={{x: 100, y: 80}} />
+          <Event title="Born" year="1995" description="I was born!" position={{x: 100, y: 60}} />
         </div>
 
         <div className="timeline-player">
