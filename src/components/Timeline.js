@@ -20,7 +20,8 @@ class Timeline extends Component {
     return (
       <div className="timeline">
         <div className="timeline-events">
-          <Event title="Born" year="1995" description="I was born!" position={{x: 100, y: 60}} />
+          <Event title="Born" year="1995" description="I was born!" position={{x: 100, y: 70}} />
+          <Event title="First Job!" year="2013" description="My first job as developer" position={{x: 500, y: -240}} />
         </div>
 
         <div className="timeline-player">
@@ -28,8 +29,8 @@ class Timeline extends Component {
         </div>
 
         <div className="timeline-controls">
-          <Arrow direction="left" event={() => this.handleArrows("left")} />
-          <Arrow direction="right" event={() => this.handleArrows("right")} />
+          {/* <Arrow direction="left" event={() => this.handleArrows("left")} />
+          <Arrow direction="right" event={() => this.handleArrows("right")} /> */}
         </div>
       </div>
     );

@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import './css/base.css';
+import 'font-awesome/css/font-awesome.css';
 
 import Timeline from './components/Timeline';
 import Header from './components/Header';
