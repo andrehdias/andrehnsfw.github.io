@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import Player from './Player';
 import Event from './Event';
-import Arrow from './Arrow';
+// import Arrow from './Arrow';
 
 import '../css/timeline.css';
 
