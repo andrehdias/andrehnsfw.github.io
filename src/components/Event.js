@@ -10,12 +10,16 @@ class Event extends Component {
     this.props = props;
   }
 
+  shouldComponentUpdate() { return false; }
+
   render() {
     const style = {
       top: this.props.position.y,
       left: this.props.position.x,
       '--animation-delay': `${Math.random()}s`
     };
+
+    console.log(this.props)
 
     return (
       <div className={["event", (style.top < 0) ? 'event--up' : 'event--down'].join(' ')} style={style}>

@@ -8,7 +8,7 @@
   transform: translate3d(0, 0, 0);
 }
 
-.timeline--stop .event {
+.event {
   animation: event-down 2s infinite;
   animation-delay: var(--animation-delay);
 }

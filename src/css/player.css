@@ -6,6 +6,9 @@
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: left top;
+  position: relative;
+  z-index: 9;
+  transform: translateY(-10px);
 }
 
 .player--left {

@@ -12,8 +12,8 @@ class Timeline extends Component {
 
     this.handleEvents();
 
-    this.$events = [];
     this.events = events.sort((a, b) => a.position.x > b.position.x);
+    this.timelineSpeed = 30;
     this.timelineWidth = this.events[this.events.length - 1].position.x + 250;
     this.translateLimit = (this.timelineWidth - 250) * -1;
 
@@ -30,12 +30,16 @@ class Timeline extends Component {
       width: this.timelineWidth
     };
 
+    const playerTrackStyle = {
+      transform: `translate3d(${this.state.translateX}px, 0, 0)`,
+    };
+
     return (
       <div className={['timeline', (!this.state.isMoving) ? 'timeline--stop' : ''].join(' ')}>
         <div className="timeline-events" style={style}>
           {events.map(event => {
             return (
-              <Event ref={input => this.$events.push(input)} key={event.title} title={event.title} location={event.location} description={event.description} position={event.position}/>
+              <Event key={event.title} title={event.title} year={event.year} location={event.location} description={event.description} position={event.position}/>
             )
           })}
         </div>
@@ -55,7 +59,7 @@ class Timeline extends Component {
 
       switch (ev.keyCode) {
         case 37:
-          newTranslateX = this.state.translateX + 30;
+          newTranslateX = this.state.translateX + this.timelineSpeed;
 
           this.setState({
             direction: 'left',
@@ -64,7 +68,7 @@ class Timeline extends Component {
           });
           break;
         case 39:
-          newTranslateX = this.state.translateX - 30;
+          newTranslateX = this.state.translateX - this.timelineSpeed;
 
           this.setState({
             direction: 'right',

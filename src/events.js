@@ -1,12 +1,12 @@
 const events = [
   {
-    title: "born",
+    title: "Born",
     location: "Pelotas - Brazil",
     year: 1995,
     description: "I was born!",
     position: {
-      x: 100,
-      y: 70
+      x: 300,
+      y: 100
     }
   },
   {
@@ -17,6 +17,16 @@ const events = [
     position: {
       x: 500,
       y: -240
+    }
+  },
+  {
+    title: "Second Job",
+    location: "Porto Alegre - Brazil",
+    year: 2013,
+    description: "My Second job as developer",
+    position: {
+      x: 900,
+      y: 100
     }
   }
 ];
