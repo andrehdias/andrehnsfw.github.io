@@ -10,10 +10,7 @@
 .timeline-events {
   position: relative;
   width: 100%;
-}
-
-.timeline-controls {
-
+  transition: transform .1s;
 }
 
 .timeline-player {

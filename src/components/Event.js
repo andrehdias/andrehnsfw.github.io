@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import '../css/event.css';
 
+import FontAwesome from 'react-fontawesome';
+
 class Event extends Component {
   constructor(props) {
     super();
@@ -18,7 +20,12 @@ class Event extends Component {
     return (
       <div className={["event", (style.top < 0) ? 'event--up' : 'event--down'].join(' ')} style={style}>
         <h3>{this.props.title}</h3>
-        <span>{this.props.year}</span>
+        <span>
+          <FontAwesome name="map-marker" size="lg" /> {this.props.location}
+        </span>
+        <span>
+          <FontAwesome name="calendar" /> {this.props.year}
+        </span>
         <p>{this.props.description}</p>
       </div>
     );

@@ -5,9 +5,41 @@
   border: 3px solid #fff;
   border-radius: 10px;
   transition: top 2s ;
+  transform: translate3d(0, 0, 0);
+}
+
+.timeline--stop .event {
   animation: event-down 2s infinite;
   animation-delay: var(--animation-delay);
 }
+
+.event h3 {
+  margin-top: 0;
+}
+
+.event > span,
+.event p {
+  display: inline-block;
+  width: 100%;
+}
+
+.event > span {
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.event p {
+  margin-bottom: 0;
+}
+
+.event .fa-map-marker {
+  margin-right: 3px;
+}
+
+.event .fa-calendar {
+  margin-right: 1px;
+}
+
 
 @keyframes event-down {
   0% {
@@ -35,8 +67,8 @@
 }
 
 .event:after {
-  border-width: 10px;
-	margin-left: -10px;
+  border-width: 11px;
+	margin-left: -11px;
   border-color: rgba(0, 0, 0, 0);
 }
 
