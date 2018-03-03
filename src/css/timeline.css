@@ -5,11 +5,13 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  overflow: hidden;
 }
 
 .timeline-events {
   position: relative;
   width: 100%;
+  left: 0;
   transition: transform .1s;
 }
 
@@ -17,10 +19,10 @@
   width: 100%;
   height: 64px;;
   text-align: center;
-  background: green;
+  background: #fff;
   position: relative;
 }
-
+/*
 .timeline-player:before {
   content: "";
   width: 100%;
@@ -29,4 +31,4 @@
   position: absolute;
   left: 0;
   bottom: 32px;
-}
+} */

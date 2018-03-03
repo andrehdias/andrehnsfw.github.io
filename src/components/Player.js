@@ -1,5 +1,5 @@
 import React from 'react';
-import PlayerImage from '../assets/mage_walk.png';
+import PlayerImage from '../assets/andreh.png';
 import '../css/player.css';
 
 const Player = ({direction}) => {

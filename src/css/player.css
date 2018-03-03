@@ -12,29 +12,29 @@
 }
 
 .player--left {
-  animation: player-animation-left .6s steps(3) infinite;
+  animation: player-animation-left .6s steps(4) infinite;
 }
 
 .player--right {
-  animation: player-animation-right .6s steps(3) infinite;
+  animation: player-animation-right .6s steps(4) infinite;
 }
 
 @keyframes player-animation-left {
-  0% {
-    background-position: 0px -96px;
-  }
-
-  100% {
-    background-position: -96px -96px;
-  }
-}
-
-@keyframes player-animation-right {
   0% {
     background-position: 0px -32px;
   }
 
   100% {
-    background-position: -96px -32px;
+    background-position: -128px -32px;
+  }
+}
+
+@keyframes player-animation-right {
+  0% {
+    background-position: 0px 0px;
+  }
+
+  100% {
+    background-position: -128px 0px;
   }
 }
