@@ -1,14 +1,14 @@
 .player {
   display: inline-block;
   margin: 0 auto;
-  width: 32px;
-  height: 32px;
+  width: 64px;
+  height: 64px;
   overflow: hidden;
   background-repeat: no-repeat;
   background-position: left top;
   position: relative;
   z-index: 9;
-  transform: translateY(-10px);
+  transform: translateY(-20px);
 }
 
 .player--left {
@@ -21,11 +21,11 @@
 
 @keyframes player-animation-left {
   0% {
-    background-position: 0px -32px;
+    background-position: 0px -64px;
   }
 
   100% {
-    background-position: -128px -32px;
+    background-position: -256px -64px;
   }
 }
 
@@ -35,6 +35,6 @@
   }
 
   100% {
-    background-position: -128px 0px;
+    background-position: -256px 0px;
   }
 }
