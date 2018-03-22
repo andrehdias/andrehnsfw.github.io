@@ -19,6 +19,13 @@
 
 .intro p {
   padding: 0 30px;
+  font-size: 20px;
+  line-height: 28px;
+  text-align: center;
+}
+
+.intro h1 {
+  font-size: 28px;
 }
 
 .intro h1,

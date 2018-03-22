@@ -3,6 +3,8 @@ header {
   position: absolute;
   padding: 15px;
   display: flex;
+  background: rgba(0, 0, 0, 0.9);
+  z-index: 9;
 }
 
 .title {

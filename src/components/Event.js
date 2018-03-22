@@ -14,7 +14,7 @@ class Event extends Component {
 
   render() {
     const style = {
-      top: this.props.position.y,
+      top: this.props.position.y + (window.innerHeight / 2),
       left: this.props.position.x,
       '--animation-delay': `${Math.random()}s`
     };
@@ -22,7 +22,7 @@ class Event extends Component {
     console.log(this.props)
 
     return (
-      <div className={["event", (style.top < 0) ? 'event--up' : 'event--down'].join(' ')} style={style}>
+      <div className={["event", (this.props.position.y < 0) ? 'event--up' : 'event--down'].join(' ')} style={style}>
         <h3>{this.props.title}</h3>
         <span>
           <FontAwesome name="map-marker" size="lg" /> {this.props.location}

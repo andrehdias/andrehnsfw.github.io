@@ -30,6 +30,7 @@
 
 .event p {
   margin-bottom: 0;
+  font-size: 12px;
 }
 
 .event .fa-map-marker {
