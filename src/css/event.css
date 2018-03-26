@@ -33,6 +33,10 @@
   font-size: 12px;
 }
 
+.event a {
+  display: inline-block;
+}
+
 .event .fa-map-marker {
   margin-right: 3px;
 }

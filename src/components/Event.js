@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import '../css/event.css';
 
 import FontAwesome from 'react-fontawesome';
+import Parser from 'html-react-parser';
 
 class Event extends Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class Event extends Component {
         <span>
           <FontAwesome name="calendar" /> {this.props.year}
         </span>
-        <p>{this.props.description}</p>
+        <p>{Parser(this.props.description)}</p>
       </div>
     );
   }
